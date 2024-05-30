@@ -28,10 +28,8 @@
     transition: background-color 0.3s, color 0.3s;
   }
 }
-
-.nav {
-  display: flex;
-  justify-content: space-between;
+.navbar{
+  padding: 10px 300px;
 }
 
 .nav-list {
@@ -87,6 +85,55 @@
   font-family: var(--lato);
 }
 
-.navigation-link:hover {
-  text-decoration: underline;
+.nav-text:hover {
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid transparent;
+	border-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	border-image-slice: 1;
 }
+
+.gradientText {
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-higher {
+  font-family: var(--lato);
+  font-size: 4em;
+  font-weight: 700;
+}
+
+.font-lower {
+  font-family: var(--lato);
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.landing-description {
+  width: 900px;
+  text-align: center;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+}
+
+.gradient-icon path {
+  fill: url(#gradient);
+}
+
