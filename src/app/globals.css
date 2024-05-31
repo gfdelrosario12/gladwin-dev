@@ -1,6 +1,10 @@
 /* global.css */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 .roboto-regular {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -11,6 +15,23 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.bg-light {
+  background-color: #ffffff !important; /* solid white for light theme */
+}
+
+.bg-dark {
+  background-color: #121212 !important; /* solid black for dark theme */
+}
+
+
+.light-text {
+  color: black; /* or any light text color */
+}
+
+.dark-text {
+  color: white; /* or any dark text color */
 }
 
 :root {
@@ -71,14 +92,6 @@
   outline: inherit;
 }
 
-.light-text {
-  color: black; /* or any light text color */
-}
-
-.dark-text {
-  color: white; /* or any dark text color */
-}
-
 .navigation-link {
   color: black;
   text-decoration: none;
@@ -89,6 +102,9 @@
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.nav-item:hover {
   border-bottom: 1px solid transparent;
 	border-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 	border-image-slice: 1;
@@ -127,13 +143,31 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
-  margin: 0;
 }
 
 .gradient-icon path {
   fill: url(#gradient);
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.section {
+  padding-top: 80px; /* Adjust as needed */
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+	border-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	border-image-slice: 1;
+  border-radius: 16px;
+  width: 100%;
+}
