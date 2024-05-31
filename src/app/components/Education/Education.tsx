@@ -8,11 +8,12 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
+import {FaAngleDoubleDown} from "react-icons/fa";
 
 export default function Education() {
   return (
     <div className="content">
-      <h1 className="text-center my-3 font-higher">Education</h1>
+      <div><h1 className="text-center my-3 font-higher">Education</h1>
       <Timeline position="alternate" className="my-3">
         <TimelineItem>
           <TimelineOppositeContent>
@@ -49,12 +50,23 @@ export default function Education() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
-      </Timeline>
+          <TimelineSeparator>
+            <TimelineDot />
+          </TimelineSeparator>
+          <TimelineContent></TimelineContent>
+        </TimelineItem>
+      </Timeline></div>
+      <div>
+        <h1 className="text-center font-higher">Awards</h1>
+        <ul className="fs-3">
+          <li>
+            <p><span className="gradientText">Diwata Overcode</span>: GDSC-Loyola's Hackfest 2024 Grand Champion</p>
+          </li>
+        </ul>
+      </div>
+      <div className="fs-2">
+        <FaAngleDoubleDown />
+        </div>
     </div>
   );
 }

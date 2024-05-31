@@ -171,3 +171,9 @@ html, body {
   border-radius: 16px;
   width: 100%;
 }
+
+.side-border-gradient {
+  border-right: 1px solid transparent;
+  border-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  border-image-slice: 1;
+}
