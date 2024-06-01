@@ -1,12 +1,35 @@
+"use client";
+
 import "../../globals.css";
-import { FaGithub, FaLinkedin, FaMicrosoft,FaAngleDoubleDown } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMicrosoft, FaAngleDoubleDown } from "react-icons/fa";
 import { SiGooglecloud, SiCredly } from "react-icons/si";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function LandingPage() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  if (!mounted) return null;
+
   return (
     <div className="content">
       <div className="center-content">
-        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style={{position: 'absolute'}}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="0"
+          height="0"
+          style={{ position: "absolute" }}
+        >
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="rgba(63,94,251,1)" />
@@ -28,23 +51,25 @@ export default function LandingPage() {
         </div>
         <div className="my-3">
           <a href="https://github.com/gfdelrosario12">
-            <FaGithub className="fs-2 mx-2" style={{fill: 'url(#gradient)'}} />
+            <FaGithub className="fs-2 mx-2" style={{ fill: "url(#gradient)" }} />
           </a>
           <a href="https://www.linkedin.com/in/gladwindr/">
-            <FaLinkedin className="fs-2 mx-2" style={{fill: 'url(#gradient)'}} />
+            <FaLinkedin className="fs-2 mx-2" style={{ fill: "url(#gradient)" }} />
           </a>
           <a href="https://learn.microsoft.com/en-us/users/gladwindelrosario-3313/">
-            <FaMicrosoft className="fs-2 mx-2" style={{fill: 'url(#gradient)'}} />
+            <FaMicrosoft className="fs-2 mx-2" style={{ fill: "url(#gradient)" }} />
           </a>
           <a href="https://www.cloudskillsboost.google/public_profiles/1efc5a8d-20be-4d6c-97b5-78dc7bf36fb1">
-            <SiGooglecloud className="fs-2 mx-2" style={{fill: 'url(#gradient)'}} />
+            <SiGooglecloud className="fs-2 mx-2" style={{ fill: "url(#gradient)" }} />
           </a>
           <a href="https://www.credly.com/users/gladwin-ferdz-del-rosario">
-            <SiCredly className="fs-2 mx-2" style={{fill: 'url(#gradient)'}} />
+            <SiCredly className="fs-2 mx-2" style={{ fill: "url(#gradient)" }} />
           </a>
         </div>
         <div className="fs-2">
-        <FaAngleDoubleDown />
+          <Link href="/#skillset">
+            <FaAngleDoubleDown className={theme === "light" ? "text-dark" : "text-light"} />
+          </Link>
         </div>
       </div>
     </div>

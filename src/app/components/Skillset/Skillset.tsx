@@ -1,3 +1,5 @@
+"use client";
+
 import {
   FaPython,
   FaJava,
@@ -21,8 +23,24 @@ import { TbNetwork } from "react-icons/tb";
 import { PiNetworkSlashBold } from "react-icons/pi";
 import { TbApi } from "react-icons/tb";
 import { IoLogoElectron } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function Skillset() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  if (!mounted) return null;
+
   return (
     <div className="content">
       <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style={{ position: "absolute" }}>
@@ -90,7 +108,7 @@ export default function Skillset() {
                 <p className="fs-5 my-1 text-center lato-regular fw-bold">Next.js</p>
               </div>
               <div className="d-flex flex-column justify-content-center align-items-center mx-3">
-                <IoLogoElectron  className="fs-1" style={{ fill: "url(#gradient)" }} />
+                <IoLogoElectron className="fs-1" style={{ fill: "url(#gradient)" }} />
                 <p className="fs-5 my-1 text-center lato-regular fw-bold">Electron.js</p>
               </div>
               <div className="d-flex flex-column justify-content-center align-items-center mx-3">
@@ -141,7 +159,9 @@ export default function Skillset() {
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center">
               <div className="d-flex flex-column justify-content-center align-items-center mx-3">
                 <FaWindows className="fs-1" style={{ fill: "url(#gradient)" }} />
-                <p className="fs-5 my-1 text-center lato-regular fw-bold">Windows Active Directory</p>
+                <p className="fs-5 my-1 text-center lato-regular fw-bold">
+                  Windows Active Directory
+                </p>
               </div>
               <div className="d-flex flex-column justify-content-center align-items-center mx-3">
                 <MdOutlineSecurity className="fs-1" style={{ fill: "url(#gradient)" }} />
@@ -176,8 +196,10 @@ export default function Skillset() {
         </div>
       </div>
       <div className="fs-2">
-        <FaAngleDoubleDown />
-        </div>
+        <Link href="/#experiences">
+          <FaAngleDoubleDown className={theme === "light" ? "text-dark" : "text-light"} />
+        </Link>
+      </div>
     </div>
   );
 }

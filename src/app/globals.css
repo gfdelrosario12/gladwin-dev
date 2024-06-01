@@ -1,6 +1,15 @@
 /* global.css */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+  --nav-tabs-link-active-color-light: black; /* Customize as needed */
+  --nav-tabs-link-active-bg-light: #f0f0f0; /* Customize as needed */
+  --nav-tabs-link-active-color-dark: white; /* Customize as needed */
+  --nav-tabs-link-active-bg-dark: #333; /* Customize as needed */
+  --text-dark: #121212;
+  --text-light: #ffffff;
+}
+
 html, body {
   scroll-behavior: smooth;
 }
@@ -98,13 +107,36 @@ html, body {
   font-family: var(--lato);
 }
 
-.nav-text:hover {
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-family: var(--lato);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px; /* Customize as needed */
+  margin: 5px; /* Customize as needed */
 }
 
+.nav-link-tab{
+  color: black;
+  text-decoration: none;
+  font-family: var(--lato);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px; /* Customize as needed */
+  margin: 5px; /* Customize as needed */
+}
+
+
 .nav-item:hover {
+  border-bottom: 1px solid transparent;
+	border-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	border-image-slice: 1;
+}
+
+.normal-link:hover {
   border-bottom: 1px solid transparent;
 	border-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 	border-image-slice: 1;
@@ -180,4 +212,8 @@ html, body {
 
 .hide {
   display: none;
+}
+
+a {
+  text-decoration: none;
 }

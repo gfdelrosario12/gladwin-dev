@@ -1,3 +1,5 @@
+"use client";
+
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -7,9 +9,25 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
 import { FaAngleDoubleDown } from "react-icons/fa";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function Experiences() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  if (!mounted) return null;
+
   return (
     <div className="content">
       <h1 className="text-center my-3 font-higher">Experiences</h1>
@@ -133,7 +151,9 @@ export default function Experiences() {
           <TimelineItem>
             <TimelineOppositeContent>
               <Typography className="fw-bold">AWS Cloud Club – PUP</Typography>
-              <Typography className="fw-bold">Department of Advance Network and Infrastructure</Typography>
+              <Typography className="fw-bold">
+                Department of Advance Network and Infrastructure
+              </Typography>
               <Typography className="fw-bold">November 2023 – Present</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -164,8 +184,10 @@ export default function Experiences() {
         </Timeline>
       </div>
       <div className="fs-2">
-        <FaAngleDoubleDown />
-        </div>
+        <Link href="/#certifications">
+          <FaAngleDoubleDown className={theme === "light" ? "text-dark" : "text-light"} />
+        </Link>
+      </div>
     </div>
   );
 }

@@ -9,8 +9,24 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
 import { FaAngleDoubleDown } from "react-icons/fa";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function Education() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  if (!mounted) return null;
+
   return (
     <div className="content">
       <div>
@@ -18,7 +34,9 @@ export default function Education() {
         <Timeline position="alternate" className="my-3">
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography variant="h6" className="fw-bold">Senior High School</Typography>
+              <Typography variant="h6" className="fw-bold">
+                Senior High School
+              </Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -35,7 +53,9 @@ export default function Education() {
           </TimelineItem>
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography variant="h6" className="fw-bold">Undergraduate</Typography>
+              <Typography variant="h6" className="fw-bold">
+                Undergraduate
+              </Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -63,13 +83,18 @@ export default function Education() {
         <ul className="fs-3">
           <li>
             <Typography variant="body1">
-              <p className="fs-3"><span className="gradientText">Diwata Overcode</span>: GDSC-Loyola's Hackfest 2024 Grand Champion</p>
+              <p className="fs-3">
+                <span className="gradientText">Diwata Overcode</span>: GDSC-Loyola's Hackfest 2024
+                Grand Champion
+              </p>
             </Typography>
           </li>
         </ul>
       </div>
       <div className="fs-2">
-        <FaAngleDoubleDown />
+        <Link href="/#skillset">
+          <FaAngleDoubleDown className={theme === "light" ? "text-dark" : "text-light"} />
+        </Link>
       </div>
     </div>
   );
