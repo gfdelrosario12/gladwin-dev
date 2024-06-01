@@ -1,11 +1,13 @@
+import dynamic from 'next/dynamic'
 import Navigation from "../Navigation Bar/Navigation";
 import LandingPage from "../../components/Landing Page/LandingPage";
 import "../../globals.css";
-import Education from "../../components/Education/Education";
+const Education = dynamic(() => import('../../components/Education/Education'), { ssr: false })
 import Skillset from "../../components/Skillset/Skillset"; // Assuming you have this component
-import Experiences from "../../components/Experiences/Experiences"; // Assuming you have this component
+const Experiences = dynamic(() => import('../../components/Experiences/Experiences'), { ssr: false })
 import Certifications from "../../components/Certifications/Certifications"; // Assuming you have this component
 import Projects from "../../components/Projects/Projects"; // Assuming you have this component
+import Contact from "../../components/Contact/Contact"; // Assuming you have this component
 
 export default function Home() {
   return (
@@ -28,6 +30,9 @@ export default function Home() {
       </section>
       <section id="projects" className="section">
         <Projects />
+      </section>
+      <section id="contact" className="section">
+        <Contact />
       </section>
     </main>
   );

@@ -77,7 +77,7 @@ export default function Navigation() {
               </Link>
             </li>
             <li className="nav-item mx-3">
-              <Link href="/Home/#certifications" className="navigation-link d-flex align-items-center">
+              <Link href="/#certifications" className="navigation-link d-flex align-items-center">
                 <FaCertificate className={`me-2 nav-icon ${theme === "light" ? "text-dark" : "text-light"}`} />
                 <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
                   Certifications
@@ -89,6 +89,14 @@ export default function Navigation() {
                 <FaProjectDiagram className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
                 <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
                   Projects
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item mx-3">
+              <Link href="/#contact" className="navigation-link d-flex align-items-center">
+                <FaProjectDiagram className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
+                <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+                  Contact Me
                 </span>
               </Link>
             </li>

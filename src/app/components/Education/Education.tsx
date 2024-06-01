@@ -8,65 +8,69 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
-import {FaAngleDoubleDown} from "react-icons/fa";
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 export default function Education() {
   return (
     <div className="content">
-      <div><h1 className="text-center my-3 font-higher">Education</h1>
-      <Timeline position="alternate" className="my-3">
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <p className="fw-bold">Senior High School</p>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <div className="border-gradient mx-1 p-3">
-              <Typography variant="h6" component="span" className="gradientText">
-                Science, Technology, Engineering and Mathematics
-              </Typography>
-              <Typography>Espiritu Santo Parochial School</Typography>
-            </div>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent>
-            <p className="fw-bold">Undergraduate</p>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <div className="border-gradient mx-1 p-3">
-              <Typography variant="h6" component="span" className="gradientText">
-                Diploma in Computer Engineering Technology
-              </Typography>
-              <Typography>Polytechnic University of the Philippines</Typography>
-            </div>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot />
-          </TimelineSeparator>
-          <TimelineContent></TimelineContent>
-        </TimelineItem>
-      </Timeline></div>
+      <div>
+        <h1 className="text-center my-3 font-higher">Education</h1>
+        <Timeline position="alternate" className="my-3">
+          <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography variant="h6" className="fw-bold">Senior High School</Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <div className="border-gradient mx-1 p-3">
+                <Typography variant="h6" component="span" className="gradientText">
+                  Science, Technology, Engineering and Mathematics
+                </Typography>
+                <Typography>Espiritu Santo Parochial School</Typography>
+              </div>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography variant="h6" className="fw-bold">Undergraduate</Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <div className="border-gradient mx-1 p-3">
+                <Typography variant="h6" component="span" className="gradientText">
+                  Diploma in Computer Engineering Technology
+                </Typography>
+                <Typography>Polytechnic University of the Philippines</Typography>
+              </div>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineDot />
+            </TimelineSeparator>
+            <TimelineContent></TimelineContent>
+          </TimelineItem>
+        </Timeline>
+      </div>
       <div>
         <h1 className="text-center font-higher">Awards</h1>
         <ul className="fs-3">
           <li>
-            <p><span className="gradientText">Diwata Overcode</span>: GDSC-Loyola's Hackfest 2024 Grand Champion</p>
+            <Typography variant="body1">
+              <p className="fs-3"><span className="gradientText">Diwata Overcode</span>: GDSC-Loyola's Hackfest 2024 Grand Champion</p>
+            </Typography>
           </li>
         </ul>
       </div>
       <div className="fs-2">
         <FaAngleDoubleDown />
-        </div>
+      </div>
     </div>
   );
 }

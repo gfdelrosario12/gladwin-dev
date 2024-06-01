@@ -113,6 +113,10 @@ export default function Skillset() {
                 <SiMysql className="fs-1" style={{ fill: "url(#gradient)" }} />
                 <p className="fs-5 my-1 text-center lato-regular fw-bold">MySQL</p>
               </div>
+              <div className="d-flex flex-column justify-content-center align-items-center mx-3">
+                <TbApi className="fs-1" style={{ fill: "url(#gradient)" }} />
+                <p className="fs-5 my-1 text-center lato-regular fw-bold">Rest API</p>
+              </div>
             </div>
           </div>
           <div className="my-1">
@@ -158,10 +162,6 @@ export default function Skillset() {
               <div className="d-flex flex-column justify-content-center align-items-center mx-3">
                 <FaGithub className="fs-1" style={{ fill: "url(#gradient)" }} />
                 <p className="fs-5 my-1 text-center lato-regular fw-bold">GitHub</p>
-              </div>
-              <div className="d-flex flex-column justify-content-center align-items-center mx-3">
-                <TbApi className="fs-1" style={{ fill: "url(#gradient)" }} />
-                <p className="fs-5 my-1 text-center lato-regular fw-bold">Rest API</p>
               </div>
               <div className="d-flex flex-column justify-content-center align-items-center mx-3">
                 <SiPostman className="fs-1" style={{ fill: "url(#gradient)" }} />
