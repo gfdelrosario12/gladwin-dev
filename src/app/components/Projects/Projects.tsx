@@ -100,7 +100,7 @@ export default function Projects() {
     <div className="content">
       <h1 className="text-center my-3 font-higher">Projects</h1>
       {activeTab === "Active" && <h1 className="fs-3 my-1">Click a tab below to view projects per category.</h1>}
-      <ul className="nav nav-underline">
+      <ul className="nav nav-underline d-flex flex-row flex-wrap">
         <li className="nav-item">
           <button
             className={`nav-link-tab ${activeTab === "fullstack" ? "active" : ""}`}

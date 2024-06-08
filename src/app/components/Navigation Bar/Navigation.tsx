@@ -13,6 +13,7 @@ import {
   FaSun,
   FaMoon,
 } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "../../globals.css";
 
 export default function Navigation() {
@@ -35,7 +36,7 @@ export default function Navigation() {
         theme === "light" ? "border-dark bg-light" : "border-light bg-dark"
       }`}
     >
-      <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style={{position: 'absolute'}}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style={{ position: "absolute" }}>
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="rgba(63,94,251,1)" />
@@ -46,61 +47,79 @@ export default function Navigation() {
       <div className="container-fluid">
         <Link href="/" className="logo-link navigation-link d-flex align-items-center nav-item">
           <FaCode className={`nav-logo me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
-          <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>gladwin.dev</span>
+          <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+            gladwin.dev
+          </span>
         </Link>
         <div className="d-flex flex-row align-items-center">
-          <ul className="navbar-nav d-flex flex-row align-items-center">
-            <li className="nav-item mx-3">
-              <Link href="/#education" className="navigation-link d-flex align-items-center">
-                <span className="changeColor">
-                  <FaGraduationCap className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
-                </span>
-                <span className={`nav-text nav-icon ${theme === "light" ? "text-dark" : "text-light"}`}>
-                  Education
-                </span>
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link href="/#skillset" className="navigation-link d-flex align-items-center">
-                <FaTools className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
-                <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
-                  Skillset
-                </span>
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link href="/#experiences" className="navigation-link d-flex align-items-center">
-                <FaBriefcase className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
-                <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
-                  Experiences
-                </span>
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link href="/#certifications" className="navigation-link d-flex align-items-center">
-                <FaCertificate className={`me-2 nav-icon ${theme === "light" ? "text-dark" : "text-light"}`} />
-                <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
-                  Certifications
-                </span>
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link href="/#projects" className="navigation-link d-flex align-items-center">
-                <FaProjectDiagram className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
-                <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
-                  Projects
-                </span>
-              </Link>
-            </li>
-            <li className="nav-item mx-3">
-              <Link href="/#contact" className="navigation-link d-flex align-items-center">
-                <FaProjectDiagram className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
-                <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
-                  Contact Me
-                </span>
-              </Link>
-            </li>
-          </ul>
+          <div className="navbar-link-items">
+            <ul className="navbar-nav d-flex flex-row align-items-center">
+              <li className="nav-item mx-3">
+                <Link href="/#education" className="navigation-link d-flex align-items-center">
+                  <span className="changeColor">
+                    <FaGraduationCap
+                      className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                    />
+                  </span>
+                  <span
+                    className={`nav-text nav-icon ${
+                      theme === "light" ? "text-dark" : "text-light"
+                    }`}
+                  >
+                    Education
+                  </span>
+                </Link>
+              </li>
+              <li className="nav-item mx-3">
+                <Link href="/#skillset" className="navigation-link d-flex align-items-center">
+                  <FaTools className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
+                  <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+                    Skillset
+                  </span>
+                </Link>
+              </li>
+              <li className="nav-item mx-3">
+                <Link href="/#experiences" className="navigation-link d-flex align-items-center">
+                  <FaBriefcase
+                    className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                  />
+                  <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+                    Experiences
+                  </span>
+                </Link>
+              </li>
+              <li className="nav-item mx-3">
+                <Link href="/#certifications" className="navigation-link d-flex align-items-center">
+                  <FaCertificate
+                    className={`me-2 nav-icon ${theme === "light" ? "text-dark" : "text-light"}`}
+                  />
+                  <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+                    Certifications
+                  </span>
+                </Link>
+              </li>
+              <li className="nav-item mx-3">
+                <Link href="/#projects" className="navigation-link d-flex align-items-center">
+                  <FaProjectDiagram
+                    className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                  />
+                  <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+                    Projects
+                  </span>
+                </Link>
+              </li>
+              <li className="nav-item mx-3">
+                <Link href="/#contact" className="navigation-link d-flex align-items-center">
+                  <FaProjectDiagram
+                    className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                  />
+                  <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+                    Contact Me
+                  </span>
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div className="mx-3">
             <button
               onClick={toggleTheme}
@@ -110,11 +129,15 @@ export default function Navigation() {
               style={{ borderRadius: "15px" }}
             >
               {theme === "light" ? (
-                <FaMoon className="me-2" style={{ fill: 'url(#gradient)' }} />
+                <FaMoon className="me-2" style={{ fill: "url(#gradient)" }} />
               ) : (
-                <FaSun className="me-2" style={{ fill: 'url(#gradient)' }} />
+                <FaSun className="me-2" style={{ fill: "url(#gradient)" }} />
               )}
             </button>
+          </div>
+          <div className="mx-3">
+            {" "}
+            <GiHamburgerMenu className="hamburger d-lg-none" />
           </div>
         </div>
       </div>

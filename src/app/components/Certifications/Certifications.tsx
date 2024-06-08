@@ -29,6 +29,12 @@ export default function Certifications() {
             <span className="gradientText">Computer Systems Servicing NCII</span>
           </li>
         </ul>
+        <ul>
+          <li>
+            IBM - Coursera:
+            <span className="gradientText"> Certified Full Stack Software Developer Professional</span>
+          </li>
+        </ul>
       </div>
       <div className="fs-2">
         <Link href="/#projects">

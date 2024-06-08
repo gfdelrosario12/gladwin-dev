@@ -28,7 +28,7 @@ const toggleTheme = () => {
 if (!mounted) return undefined;
 
   return (
-    <div className={`card border-gradient mx-3 ${theme === "light" ? "text-dark" : "text-light"}`} style={{ width: "18rem", backgroundColor: "transparent" }}>
+    <div className={`card border-gradient m-3 ${theme === "light" ? "text-dark" : "text-light"}`} style={{ width: "18rem", backgroundColor: "transparent" }}>
       <div className="card-body">
         <h5 className="card-title fw-bold">{title}</h5>
         <h6 className="card-subtitle my-2 text-body-secondary d-flex flex-row flex-wrap justify-content-center align-items-center">{children}</h6>
