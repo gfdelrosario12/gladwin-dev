@@ -84,7 +84,8 @@ export default function Education() {
           <li>
             <Typography variant="body1">
               <p className="fs-3">
-              <span className="gradientText">Diwata Overcode</span>: GDSC-Loyola&apos;s Hackfest 2024 Grand Champion
+                <span className="gradientText">Diwata Overcode</span>: GDSC-Loyola's Hackfest 2024
+                Grand Champion
               </p>
             </Typography>
           </li>

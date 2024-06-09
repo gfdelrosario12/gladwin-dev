@@ -36,8 +36,8 @@ export default function Experiences() {
         <Timeline position="alternate" className="my-1">
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography className="fw-bold">Google Developer Student Clubs &ndash; PUP</Typography>
-              <Typography className="fw-bold">December 2022 &ndash; August 2023</Typography>
+              <Typography className="fw-bold">Google Developer Student Clubs – PUP</Typography>
+              <Typography className="fw-bold">December 2022 – August 2023</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -57,8 +57,8 @@ export default function Experiences() {
           </TimelineItem>
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography className="fw-bold">Google Developer Student Clubs &ndash; PUP</Typography>
-              <Typography className="fw-bold">August 2023 &ndash; Present</Typography>
+              <Typography className="fw-bold">Google Developer Student Clubs – PUP</Typography>
+              <Typography className="fw-bold">August 2023 – Present</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -83,8 +83,8 @@ export default function Experiences() {
         <Timeline position="alternate" className="my-1">
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography className="fw-bold">Google Developer Student Clubs &ndash; PUP</Typography>
-              <Typography className="fw-bold">December 2022 &ndash; August 2023</Typography>
+              <Typography className="fw-bold">Google Developer Student Clubs – PUP</Typography>
+              <Typography className="fw-bold">December 2022 – August 2023</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -104,7 +104,7 @@ export default function Experiences() {
           </TimelineItem>
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography className="fw-bold">August 2023 &ndash; Present</Typography>
+              <Typography className="fw-bold">August 2023 – Present</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -128,9 +128,9 @@ export default function Experiences() {
         <Timeline position="alternate" className="my-1">
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography className="fw-bold">Google Developer Student Clubs &ndash; PUP</Typography>
+              <Typography className="fw-bold">Google Developer Student Clubs – PUP</Typography>
               <Typography className="fw-bold">Mobile Development Team</Typography>
-              <Typography className="fw-bold">November 2022 &ndash; August 2023</Typography>
+              <Typography className="fw-bold">November 2022 – August 2023</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -150,11 +150,11 @@ export default function Experiences() {
           </TimelineItem>
           <TimelineItem>
             <TimelineOppositeContent>
-              <Typography className="fw-bold">AWS Cloud Club &ndash; PUP</Typography>
+              <Typography className="fw-bold">AWS Cloud Club – PUP</Typography>
               <Typography className="fw-bold">
                 Department of Advance Network and Infrastructure
               </Typography>
-              <Typography className="fw-bold">November 2023 &ndash; Present</Typography>
+              <Typography className="fw-bold">November 2023 – Present</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot />
@@ -173,8 +173,8 @@ export default function Experiences() {
                     </li>
                     <li>
                       Demonstrated adaptability and eagerness to understand networking concepts and
-                      best practices by actively participating in team&ndash;based learning initiatives
-                      and hands&ndash;on experience.
+                      best practices by actively participating in team-based learning initiatives
+                      and hands-on experience.
                     </li>
                   </ul>
                 </Typography>
