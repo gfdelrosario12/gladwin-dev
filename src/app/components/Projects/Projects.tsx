@@ -2,7 +2,15 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { FaAngleDoubleDown, FaBootstrap, FaCss3, FaHtml5, FaJava, FaReact, FaWindows } from "react-icons/fa";
+import {
+  FaAngleDoubleDown,
+  FaBootstrap,
+  FaCss3,
+  FaHtml5,
+  FaJava,
+  FaReact,
+  FaWindows,
+} from "react-icons/fa";
 import Card from "../General Components/Card";
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
@@ -34,7 +42,8 @@ export default function Projects() {
             <Card
               title="Tech Galaxy"
               subtext="A computer and computer parts e-commerce website made through HTML/JSP, CSS, Java EE and MySQL"
-              github="https://github.com"
+              link="https://github.com/WebTech2-DCPET-1-1-PUP-Main-ITECH-2023/tech-galaxy"
+              linkType="GitHub"
             >
               <FaHtml5 className="fs-1" style={{ fill: "url(#gradient)" }} />
               <FaCss3 className="fs-1" style={{ fill: "url(#gradient)" }} />
@@ -51,7 +60,8 @@ export default function Projects() {
             <Card
               title="Asteria Academy"
               subtext="A trial website for an online academy made through HTML, CSS and JavaScript/React with Bootstrap."
-              github="https://github.com"
+              link="https://github.com/gfdelrosario12/Asteria-Academy"
+              linkType="GitHub"
             >
               <FaHtml5 className="fs-1" style={{ fill: "url(#gradient)" }} />
               <FaCss3 className="fs-1" style={{ fill: "url(#gradient)" }} />
@@ -62,7 +72,8 @@ export default function Projects() {
             <Card
               title="TraiTechHive"
               subtext="A website educating about devices and digital traits made through HTML, CSS and JavaScript/React with Bootstrap."
-              github="https://github.com"
+              link="https://github.com/gfdelrosario12/TraitTechHive"
+              linkType="GitHub"
             >
               <FaHtml5 className="fs-1" style={{ fill: "url(#gradient)" }} />
               <FaCss3 className="fs-1" style={{ fill: "url(#gradient)" }} />
@@ -80,12 +91,13 @@ export default function Projects() {
             <Card
               title="Windows Server Active Directory"
               subtext="Executed the setup of a Windows Server Active Directory, showcasing competence in Windows and Windows server operating systems, computer networking concepts and personal competencies."
-              github="https://github.com"
+              link="https://drive.google.com/drive/folders/1GHMsmDkg2XDvYKhWSQ4e0CNmI5zKTM-b?usp=sharing"
+              linkType="Resume"
             >
-                <FaWindows className="fs-1" style={{ fill: "url(#gradient)" }} />
-                <MdOutlineSecurity className="fs-1" style={{ fill: "url(#gradient)" }} />
-                <TbNetwork className="fs-1" style={{ fill: "url(#gradient)" }} />
-                <PiNetworkSlashBold className="fs-1" style={{ fill: "url(#gradient)" }} />
+              <FaWindows className="fs-1" style={{ fill: "url(#gradient)" }} />
+              <MdOutlineSecurity className="fs-1" style={{ fill: "url(#gradient)" }} />
+              <TbNetwork className="fs-1" style={{ fill: "url(#gradient)" }} />
+              <PiNetworkSlashBold className="fs-1" style={{ fill: "url(#gradient)" }} />
             </Card>
           </div>
         );
@@ -99,7 +111,9 @@ export default function Projects() {
   return (
     <div className="content">
       <h1 className="text-center my-3 font-higher">Projects</h1>
-      {activeTab === "Active" && <h1 className="fs-3 my-1">Click a tab below to view projects per category.</h1>}
+      {activeTab === "Active" && (
+        <h1 className="fs-3 my-1">Click a tab below to view projects per category.</h1>
+      )}
       <ul className="nav nav-underline d-flex flex-row flex-wrap">
         <li className="nav-item">
           <button
@@ -136,8 +150,7 @@ export default function Projects() {
           >
             <h1
               className={`fs-4 lato-regular gradientText ${
-                theme
-                === "light" ? "text-dark" : "text-light"
+                theme === "light" ? "text-dark" : "text-light"
               }`}
             >
               Backend
@@ -175,10 +188,10 @@ export default function Projects() {
       </ul>
       <div className="my-3">{renderContent()}</div>
       <div className="fs-2">
-  <Link href="/#contact">
-    <FaAngleDoubleDown className={theme === "light" ? "text-dark" : "text-light"} />
-  </Link>
-</div>
+        <Link href="/#contact">
+          <FaAngleDoubleDown className={theme === "light" ? "text-dark" : "text-light"} />
+        </Link>
+      </div>
     </div>
   );
 }

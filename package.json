@@ -24,6 +24,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-animate-on-scroll": "^2.1.8",

@@ -14,6 +14,7 @@ import {
   FaMoon,
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import "../../globals.css";
 
 export default function Navigation() {
@@ -47,7 +48,7 @@ export default function Navigation() {
       <div className="container-fluid">
         <Link href="/" className="logo-link navigation-link d-flex align-items-center nav-item">
           <FaCode className={`nav-logo me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
-          <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+          <span className={theme === "light" ? "nav-text text-dark" : "nav-text text-light"}>
             gladwin.dev
           </span>
         </Link>
@@ -56,16 +57,10 @@ export default function Navigation() {
             <ul className="navbar-nav d-flex flex-row align-items-center">
               <li className="nav-item mx-3">
                 <Link href="/#education" className="navigation-link d-flex align-items-center">
-                  <span className="changeColor">
-                    <FaGraduationCap
-                      className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
-                    />
-                  </span>
-                  <span
-                    className={`nav-text nav-icon ${
-                      theme === "light" ? "text-dark" : "text-light"
-                    }`}
-                  >
+                  <FaGraduationCap
+                    className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                  />
+                  <span className={"nav-text " + (theme === "light" ? "text-dark" : "text-light")}>
                     Education
                   </span>
                 </Link>
@@ -135,9 +130,148 @@ export default function Navigation() {
               )}
             </button>
           </div>
-          <div className="mx-3">
-            {" "}
-            <GiHamburgerMenu className="hamburger d-lg-none" />
+          <div className="mx-3 hamburger">
+            <button
+              className="button-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              <GiHamburgerMenu
+                className={`d-lg-none ${theme === "light" ? "text-dark" : "text-light"}`}
+              />
+            </button>
+            <div
+              className={`offcanvas offcanvas-start ${
+                theme === "light" ? "bg-light text-dark" : "bg-dark text-light"
+              }`}
+              tabIndex={-1}
+              id="offcanvasExample"
+              aria-labelledby="offcanvasExampleLabel"
+            >
+              <div className={`offcanvas-header p-3 d-flex flex-row justify-content-between align-items-center border-bottom ${
+        theme === "light" ? "border-dark bg-light" : "border-light bg-dark"
+      }`}>
+                <Link
+                  href="/"
+                  className="logo-link navigation-link d-flex align-items-center nav-item"
+                >
+                  <FaCode
+                    className={`nav-logo me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                  />
+                  <span className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}>
+                    gladwin.dev
+                  </span>
+                </Link>
+                <button
+                  type="button"
+                  data-bs-dismiss="offcanvas"
+                  className="button-none"
+                >
+                  <IoMdClose className={`nav-logo me-2 ${theme === "light" ? "text-dark" : "text-light"}`} />
+                </button>
+              </div>
+              <div className="offcanvas-body p-3">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <Link
+                      href="/#education"
+                      className="navigation-link d-flex align-items-center"
+                      onClick={() => document.getElementById("offcanvasExample")?.classList?.remove?.("show")} // Add this line
+                      >
+                      <FaGraduationCap
+                        className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                      />
+                      <span
+                        className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}
+                      >
+                        Education
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      href="/#skillset"
+                      className="navigation-link d-flex align-items-center"
+                      onClick={() => document.getElementById("offcanvasExample")?.classList?.remove?.("show")} // Add this line
+                    >
+                      <FaTools
+                        className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                      />
+                      <span
+                        className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}
+                      >
+                        Skillset
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      href="/#experiences"
+                      className="navigation-link d-flex align-items-center"
+                      onClick={() => document.getElementById("offcanvasExample")?.classList?.remove?.("show")} // Add this line
+                    >
+                      <FaBriefcase
+                        className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                      />
+                      <span
+                        className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}
+                      >
+                        Experiences
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      href="/#certifications"
+                      className="navigation-link d-flex align-items-center"
+                      onClick={() => document.getElementById("offcanvasExample")?.classList?.remove?.("show")} // Add this line
+                    >
+                      <FaCertificate
+                        className={`me-2 nav-icon ${
+                          theme === "light" ? "text-dark" : "text-light"
+                        }`}
+                      />
+                      <span
+                        className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}
+                      >
+                        Certifications
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      href="/#projects"
+                      className="navigation-link d-flex align-items-center"
+                      onClick={() => document.getElementById("offcanvasExample")?.classList?.remove?.("show")} // Add this line
+                    >
+                      <FaProjectDiagram
+                        className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                      />
+                      <span
+                        className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}
+                      >
+                        Projects
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link href="/#contact" className="navigation-link d-flex align-items-center">
+                      <FaProjectDiagram
+                        className={`me-2 ${theme === "light" ? "text-dark" : "text-light"}`}
+                        onClick={() => document.getElementById("offcanvasExample")?.classList?.remove?.("show")} // Add this line
+                      />
+                      <span
+                        className={`nav-text ${theme === "light" ? "text-dark" : "text-light"}`}
+                      >
+                        Contact Me
+                      </span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

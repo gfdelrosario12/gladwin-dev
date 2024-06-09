@@ -7,12 +7,14 @@ export default function Card({
   title,
   children,
   subtext,
-  github,
+  link,
+  linkType
 }: {
   title: string;
   children: React.ReactNode;
   subtext: string;
-  github: string;
+  link: string;
+  linkType: string;
 }): JSX.Element | undefined {
 const [mounted, setMounted] = useState(false);
 const { theme, setTheme } = useTheme();
@@ -33,8 +35,8 @@ if (!mounted) return undefined;
         <h5 className="card-title fw-bold">{title}</h5>
         <h6 className="card-subtitle my-2 text-body-secondary d-flex flex-row flex-wrap justify-content-center align-items-center">{children}</h6>
         <p className={`card-text ${theme === "light" ? "text-dark" : "text-light"}`}>{subtext}</p>
-        <a href={github} className="gradientText normal-link fs-5">
-          Project Link
+        <a href={link} target="_blank" className="gradientText normal-link fs-5">
+          {linkType}
         </a>
       </div>
     </div>

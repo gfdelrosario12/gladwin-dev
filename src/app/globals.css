@@ -205,6 +205,16 @@ a {
   display: none;
 }
 
+.button-none {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.offcanvas-backdrop.show {
+  opacity: .0;
+}
+
 /* Responsive Styles */
 
 @media (max-width: 1200px) {
